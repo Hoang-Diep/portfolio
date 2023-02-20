@@ -1,0 +1,50 @@
+// COLOR
+$black: #211e1f;
+$white: #fff;
+$red: #d84339;
+$vani: #f3ece4;
+$grey: #e8dccc;
+
+// FONT
+$fontTitle1: 'Xanh Mono', monospace;
+$fontTitle2: 'Anton', sans-serif;
+$fontText1: 'Roboto Mono', monospace;
+$fontText2: 'Courier New';
+
+
+
+@mixin flex($value1, $value2, $value3) {
+	display: flex;
+	flex-direction: $value1;
+	justify-content: $value2;
+	align-items: $value3;
+}
+
+@mixin autoSize {width: 100%; height: 100%;}
+
+@mixin noneImg {
+	
+	
+	&:before {
+		content: '?';
+		
+		position: absolute;
+		top: 0;
+		left: 0;
+		
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+		width: 100%;
+		height: 100%;
+		
+		color: $red;
+		
+		font-family: $fontText2;
+		font-size: 20em;
+		font-weight: 700;
+		
+		z-index: -1;
+	}
+}

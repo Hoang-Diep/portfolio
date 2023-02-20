@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+@import '_mixin.scss';
+
+
+
+// RESET CSS
+* {
+	box-sizing: border-box;
+	
+	margin: 0;
+	padding: 0;
+	
+	
+	// RESET CSS IMAGES
+	img {@include autoSize; object-fit: cover;}
+	
+	
+	// RESET CSS LINKS
+	a {text-decoration: none;}
+	
+	
+	// RESET CSS LISTS
+	li {list-style: none;}
+}
+
+
+
+html {
+	scroll-behavior: smooth;
+	scroll-snap-type: y mandatory;
+}
+body {
+	background: $white;
+	color: $black;
+	
+	font-family: $fontText1;
+	overflow-x: hidden;
+	
+	
+	// NAVICATION STYLE
+	nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		
+		border-right: 2px solid $black;
+		
+		width: 60px;
+		height: 100vh;
+		
+		background: $white;
+		
+		
+		// MENU LAYOUT
+		.menu {
+			display: grid;
+			grid-template-rows: repeat(4, 1fr);
+			
+			height: 100%;
+			
+			
+			// MENU ITEMS STYLE
+			li {
+				@include flex(row, center, center);
+				@include autoSize;
+				
+				
+				a {color: $black; transition: 0.3s;}
+				a span {font-size: 2rem;}
+				
+				
+				&:hover a {color: $red;}
+			}
+		}
+	}
+	
+	
+	// HEADER STYLE
+	.header {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+		width: 100%;
+		height: 100vh;
+		margin-bottom: 200px;
+		padding-left: 60px;
+		
+		background: $white;
+		
+		
+		// HEADER TEXT
+		&__text {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			
+			/*width: 50%;
+			height: 100%;
+			margin-right: 100px;*/
+			
+			font-family: $fontText1; 
+			font-size: 2rem;
+			
+			
+			&--top {font-size: 3rem;}
+			
+			
+			h1 {
+				margin: 50px 0;
+				
+				color: $black;
+
+				font-family: $fontTitle2;
+				font-size: 12rem;
+				font-weight: 700;
+				letter-spacing: 0.3rem;
+			}
+		}
+	}
+	
+	
+	// MAIN STYLE
+	main {
+		width: 100%;
+		padding-left: 60px;
+		
+		
+		// ALL ARTICLE STYLE
+		article {
+			padding-bottom: 200px;
+			
+			
+			header {
+				@include flex(row, unset, center);
+				
+				width: 80%;
+				max-width: 1200px;
+				height: 600px;
+				margin: 0 auto;
+				
+				
+				h2 {
+					font-family: $fontTitle2;
+					font-size: 12rem;
+					font-weight: 400;
+					letter-spacing: 0.2rem;
+				}
+			}
+			
+			
+			section {width: 80%; max-width: 1200px; margin: 0 auto;}
+		}
+		
+		
+		// ARTICLE PROJECT STYLE
+		.project {
+			position: relative;
+			
+			background: $black;
+			color: $white;
+			
+			height: 100%;
+			
+			
+			// ALL PROJECT'S SECTION STYLE
+			section {
+				width: 80%; 
+				max-width: 1200px;
+				
+				
+				&:last-child {margin-top: 100px;}
+				
+				
+				// ALL PROJECT SECTION TITLE STYLE
+				h3 {
+					color: $white; 
+
+					font-size: 4rem;
+					font-weight: 700;
+				}
+				
+				
+				// ALL PROJECT LIST STYLE
+				ul {
+					width: 100%;
+					margin-top: 50px;
+					
+					
+					// ALL PROJECT LIST ITEMS STYLE
+					li {
+						@include flex(column, center, center);
+
+						position: relative;
+						background: $white;
+
+						z-index: 0;
+						
+
+						a {
+							@include flex(column, center, center);
+							@include autoSize;
+							
+							position: relative;
+							
+							color: $black;
+							
+							
+							&:hover .intro {opacity: 0.9;}
+							
+							
+							.intro {
+								@include flex(column, center, center);
+								@include autoSize;
+								
+								position: absolute;
+								top: 0;
+								left: 0;
+								
+								padding: 0 50px;
+								
+								background: $white;
+								color: $black;
+								opacity: 0;
+								
+								font-size: 1.5rem;
+								
+								transition: 0.4s;
+							}
+						}
+					}
+				}
+			}
+			
+			
+			// WEB PROJECT STYLE
+			&__web ul {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-gap: 50px;
+				
+				
+				// WEB PROJECT LIST STYLE
+				li {min-height: 500px;}
+			}
+			
+			
+			// LOGO PROJECT STYLE
+			&__logo ul {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				grid-gap: 50px;
+			}
+		}
+		
+		
+		// ARTICLE ABOUT STYLE
+		.about {
+			
+			
+			// FOR ALL ABOUT'S SECTION
+			section {margin-bottom: 100px;}
+			section:last-child {margin-bottom: 0;}
+			
+			
+			// ABOUT INFO STYLE
+			.info {
+				position: relative;
+				
+				display: grid;
+				grid-template-columns: 3fr 2fr;	
+				grid-template-areas: 'cnt img';
+				grid-gap: 50px;
+				
+				width: 80%; 
+				max-width: 1200px;
+				
+				
+				// ABOUT INFO IMG STYLE
+				&__img {grid-area: img; width: 100%; height: 500px;}
+				
+				
+				// ABOUT INFO IMG STYLE
+				&__content {
+					grid-area: cnt; 
+					line-height: 2;
+					
+					
+					h3 {margin-bottom: 50px; font-size: 4rem; line-height: 1.5;}
+				}
+			}
+			
+			
+			// ABOUT EDUCATION STYLE
+			.education {
+				position: relative;
+				
+				
+				h3 {margin-bottom: 50px; font-size: 4rem;}
+				
+				
+				&__content ul {
+					@include autoSize;
+					
+					position: relative;
+					
+					border: none;
+					margin-left: 10px;
+					
+					
+					
+					li {
+						position: relative;
+						
+						max-width: 800px;
+						width: 100%;
+						margin-bottom: 20px;
+						
+						line-height: 2;
+						
+						
+						.time {margin-right: 20px; font-size: 0.9rem; font-weight: 700;}
+					}
+				}
+			}	
+			
+			
+			// ABOUT SKILLS STYLE
+			.skills {
+				
+				
+				h3 {margin-bottom: 50px; font-size: 4rem;}
+				
+				
+				ul {
+					@include flex(row, center, center);
+					
+					width: 100%;
+					margin-bottom: 50px;
+					
+					
+					li {
+						@include flex(row, center, center);
+						
+						position: relative;
+						
+						width: 180px; 
+						height: 180px; 
+						margin: 0 50px;
+						
+						overflow-x: hidden;
+						
+						
+						&:hover .percent {opacity: 0.9;}
+						
+						
+						.percent {
+							@include flex(column, center, center);
+							@include autoSize;
+							
+							position: absolute;
+							top: 0;
+							left: 0;
+							
+							background: $white;
+							opacity: 0;
+							
+							transition: 0.4s;
+							
+							
+							svg {
+								position: relative;
+								
+								width: 150px;
+								height: 150px;
+								
+								
+								circle {
+									@include autoSize;
+									
+									transform: translate(5px, 5px);
+									
+									fill: none;
+									stroke: $red;
+									stroke-width: 5px;
+									stroke-dasharray: 440px;
+									stroke-dashoffset: 440px;
+									
+									
+									&:first-child {stroke: #eee; stroke-dashoffset: 0;}
+									&:last-child {stroke: #333; stroke-dashoffset: calc(440 - (440 * var(--i)) / 100);}
+								}
+							}
+							
+							
+							.number {
+								@include flex(row, center, center);
+								@include autoSize;
+								
+								position: absolute;
+								top: 0;
+								left: 0;
+								
+								
+								div {font-size: 2rem;}
+								div span {font-size: 1.5rem;}
+							}
+						}
+					}
+					
+					
+					&:last-child {
+						margin-bottom: 0;
+						
+						
+						li span {
+							@include flex(column, center, center);
+							@include autoSize;
+							
+							position: absolute;
+							top: 0;
+							left: 0;
+							
+							background: $white;
+							opacity: 0;
+							
+							font-size: 2rem;
+							
+							transition: 0.4s;
+						}
+						li:hover span {opacity: 0.9;}
+					}
+				}
+			}
+		}
+		
+		
+		// CONTACT STYLE
+		.contact {
+			padding-bottom: 50px;
+			
+			
+			&__content {
+				display: grid;
+				grid-template-columns: 2fr 1fr;
+				
+				width: 80%;
+				max-width: 1200px;
+				height: auto;
+				margin: 0 auto;
+				
+				
+				// CONTACT LEFT STYLE
+				&--left {
+					width: 100%;
+					
+					
+					li a {
+						display: grid;
+						grid-template-columns: 50px auto;
+						
+						width: 100%;
+						height: 50px;
+						
+						color: $black;
+						
+						
+						ion-icon {font-size: 1.5rem;}
+					}
+				}
+				
+				
+				// CONTACT RIGHT STYLE
+				&--right {
+					width: 100%;
+					
+					
+					li a {
+						display: grid;
+						grid-template-columns: 50px auto;
+						
+						width: 100%;
+						height: 50px;
+						
+						color: $black;
+						
+						
+						ion-icon {font-size: 1.5rem;}
+					}
+				}
+				
+				
+				// ALL LI:HOVER STYLE
+				ul li:hover, ul li:hover a {color: $red;}
+			}
+		}
+	}
+}

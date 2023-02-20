@@ -1,0 +1,396 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+/* line 10, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+  /* line 18, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+  * img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  /* line 22, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+  * a {
+    text-decoration: none; }
+  /* line 26, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+  * li {
+    list-style: none; }
+
+/* line 31, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory; }
+
+/* line 35, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+body {
+  background: #fff;
+  color: #211e1f;
+  font-family: "Roboto Mono", monospace;
+  overflow-x: hidden; }
+  /* line 44, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+  body nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-right: 2px solid #211e1f;
+    width: 60px;
+    height: 100vh;
+    background: #fff; }
+    /* line 58, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+    body nav .menu {
+      display: grid;
+      grid-template-rows: repeat(4, 1fr);
+      height: 100%; }
+      /* line 66, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+      body nav .menu li {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%; }
+        /* line 71, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+        body nav .menu li a {
+          color: #211e1f;
+          transition: 0.3s; }
+        /* line 72, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+        body nav .menu li a span {
+          font-size: 2rem; }
+        /* line 75, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+        body nav .menu li:hover a {
+          color: #d84339; }
+  /* line 82, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+  body .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 200px;
+    padding-left: 60px;
+    background: #fff; }
+    /* line 96, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+    body .header__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /*width: 50%;
+			height: 100%;
+			margin-right: 100px;*/
+      font-family: "Roboto Mono", monospace;
+      font-size: 2rem; }
+      /* line 110, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+      body .header__text--top {
+        font-size: 3rem; }
+      /* line 113, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+      body .header__text h1 {
+        margin: 50px 0;
+        color: #211e1f;
+        font-family: "Anton", sans-serif;
+        font-size: 12rem;
+        font-weight: 700;
+        letter-spacing: 0.3rem; }
+  /* line 128, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+  body main {
+    width: 100%;
+    padding-left: 60px; }
+    /* line 134, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+    body main article {
+      padding-bottom: 200px; }
+      /* line 138, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+      body main article header {
+        display: flex;
+        flex-direction: row;
+        justify-content: unset;
+        align-items: center;
+        width: 80%;
+        max-width: 1200px;
+        height: 600px;
+        margin: 0 auto; }
+        /* line 147, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+        body main article header h2 {
+          font-family: "Anton", sans-serif;
+          font-size: 12rem;
+          font-weight: 400;
+          letter-spacing: 0.2rem; }
+      /* line 156, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+      body main article section {
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto; }
+    /* line 161, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+    body main .project {
+      position: relative;
+      background: #211e1f;
+      color: #fff;
+      height: 100%; }
+      /* line 171, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+      body main .project section {
+        width: 80%;
+        max-width: 1200px; }
+        /* line 176, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+        body main .project section:last-child {
+          margin-top: 100px; }
+        /* line 180, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+        body main .project section h3 {
+          color: #fff;
+          font-size: 4rem;
+          font-weight: 700; }
+        /* line 189, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+        body main .project section ul {
+          width: 100%;
+          margin-top: 50px; }
+          /* line 195, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+          body main .project section ul li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background: #fff;
+            z-index: 0; }
+            /* line 204, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+            body main .project section ul li a {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+              height: 100%;
+              position: relative;
+              color: #211e1f; }
+              /* line 213, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+              body main .project section ul li a:hover .intro {
+                opacity: 0.9; }
+              /* line 216, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+              body main .project section ul li a .intro {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 0 50px;
+                background: #fff;
+                color: #211e1f;
+                opacity: 0;
+                font-size: 1.5rem;
+                transition: 0.4s; }
+      /* line 241, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+      body main .project__web ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px; }
+        /* line 248, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+        body main .project__web ul li {
+          min-height: 500px; }
+      /* line 253, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+      body main .project__logo ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 50px; }
+    /* line 266, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+    body main .about section {
+      margin-bottom: 100px; }
+    /* line 267, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+    body main .about section:last-child {
+      margin-bottom: 0; }
+    /* line 271, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+    body main .about .info {
+      position: relative;
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      grid-template-areas: 'cnt img';
+      grid-gap: 50px;
+      width: 80%;
+      max-width: 1200px; }
+      /* line 284, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+      body main .about .info__img {
+        grid-area: img;
+        width: 100%;
+        height: 500px; }
+      /* line 288, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+      body main .about .info__content {
+        grid-area: cnt;
+        line-height: 2; }
+        /* line 293, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+        body main .about .info__content h3 {
+          margin-bottom: 50px;
+          font-size: 4rem;
+          line-height: 1.5; }
+    /* line 299, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+    body main .about .education {
+      position: relative; }
+      /* line 303, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+      body main .about .education h3 {
+        margin-bottom: 50px;
+        font-size: 4rem; }
+      /* line 306, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+      body main .about .education__content ul {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        border: none;
+        margin-left: 10px; }
+        /* line 316, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+        body main .about .education__content ul li {
+          position: relative;
+          max-width: 800px;
+          width: 100%;
+          margin-bottom: 20px;
+          line-height: 2; }
+          /* line 326, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+          body main .about .education__content ul li .time {
+            margin-right: 20px;
+            font-size: 0.9rem;
+            font-weight: 700; }
+    /* line 336, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+    body main .about .skills h3 {
+      margin-bottom: 50px;
+      font-size: 4rem; }
+    /* line 339, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+    body main .about .skills ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 50px; }
+      /* line 346, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+      body main .about .skills ul li {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 180px;
+        height: 180px;
+        margin: 0 50px;
+        overflow-x: hidden; }
+        /* line 358, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+        body main .about .skills ul li:hover .percent {
+          opacity: 0.9; }
+        /* line 361, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+        body main .about .skills ul li .percent {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: #fff;
+          opacity: 0;
+          transition: 0.4s; }
+          /* line 375, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+          body main .about .skills ul li .percent svg {
+            position: relative;
+            width: 150px;
+            height: 150px; }
+            /* line 382, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+            body main .about .skills ul li .percent svg circle {
+              width: 100%;
+              height: 100%;
+              transform: translate(5px, 5px);
+              fill: none;
+              stroke: #d84339;
+              stroke-width: 5px;
+              stroke-dasharray: 440px;
+              stroke-dashoffset: 440px; }
+              /* line 394, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+              body main .about .skills ul li .percent svg circle:first-child {
+                stroke: #eee;
+                stroke-dashoffset: 0; }
+              /* line 395, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+              body main .about .skills ul li .percent svg circle:last-child {
+                stroke: #333;
+                stroke-dashoffset: calc(440 - (440 * var(--i)) / 100); }
+          /* line 400, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+          body main .about .skills ul li .percent .number {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0; }
+            /* line 409, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+            body main .about .skills ul li .percent .number div {
+              font-size: 2rem; }
+            /* line 410, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+            body main .about .skills ul li .percent .number div span {
+              font-size: 1.5rem; }
+      /* line 416, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+      body main .about .skills ul:last-child {
+        margin-bottom: 0; }
+        /* line 420, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+        body main .about .skills ul:last-child li span {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: #fff;
+          opacity: 0;
+          font-size: 2rem;
+          transition: 0.4s; }
+        /* line 435, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+        body main .about .skills ul:last-child li:hover span {
+          opacity: 0.9; }
+    /* line 443, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+    body main .contact {
+      padding-bottom: 50px; }
+      /* line 447, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+      body main .contact__content {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        width: 80%;
+        max-width: 1200px;
+        height: auto;
+        margin: 0 auto; }
+        /* line 458, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+        body main .contact__content--left {
+          width: 100%; }
+          /* line 462, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+          body main .contact__content--left li a {
+            display: grid;
+            grid-template-columns: 50px auto;
+            width: 100%;
+            height: 50px;
+            color: #211e1f; }
+            /* line 472, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+            body main .contact__content--left li a ion-icon {
+              font-size: 1.5rem; }
+        /* line 478, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+        body main .contact__content--right {
+          width: 100%; }
+          /* line 482, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+          body main .contact__content--right li a {
+            display: grid;
+            grid-template-columns: 50px auto;
+            width: 100%;
+            height: 50px;
+            color: #211e1f; }
+            /* line 492, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+            body main .contact__content--right li a ion-icon {
+              font-size: 1.5rem; }
+        /* line 498, ../../Users/THE MING/OneDrive/Máy tính/PORTFOLIO/css/style.scss */
+        body main .contact__content ul li:hover, body main .contact__content ul li:hover a {
+          color: #d84339; }
+
+/*# sourceMappingURL=style.css.map */
